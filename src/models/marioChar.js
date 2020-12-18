@@ -8,7 +8,7 @@ const marioModel = new mongoose.Schema({
        required:true
    },
    weight:{
-       type:String,
+       type:Number,
        required:true
    }
 
@@ -18,3 +18,4 @@ let mariochar = mongoose.model('mariochar',marioModel);
 
 
 module.exports = mariochar;
+
