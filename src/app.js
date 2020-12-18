@@ -31,7 +31,8 @@ app.post("/mario",(req,res)=>{
 
     let newMario = new marioModel(req.body);
 
-    newMario.save().then(newMario => res.status(201).send(newMario)).catch((error)=>res.status(400).send({message:error.message}))
+    newMario.save()
+    .then(newMario => res.status(201).send(newMario)).catch((error)=>res.status(400).send({message: 'either name or weight is missing'}))
 
 })
 
